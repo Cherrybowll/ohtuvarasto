@@ -28,6 +28,7 @@ def toiminnallisuus(mehua, olutta):
     print("Otetaan 3.14")
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
+    print("rikki")
 
 def virhetilanteita1(mehua, olutta):
     print("Varasto(-100.0);")

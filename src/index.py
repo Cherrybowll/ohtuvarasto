@@ -5,6 +5,13 @@ def main():
     mehua = Varasto(100.0)
     olutta = Varasto(100.0, 20.2)
 
+    toiminnallisuus(mehua, olutta)
+
+    print("Virhetilanteita:")
+    virhetilanteita1(mehua, olutta)
+    virhetilanteita2(mehua, olutta)
+
+def toiminnallisuus(mehua, olutta):
     print("Luonnin jälkeen:")
     print(f"Mehuvarasto: {mehua}")
     print(f"Olutvarasto: {olutta}")
@@ -22,7 +29,7 @@ def main():
     mehua.ota_varastosta(3.14)
     print(f"Mehuvarasto: {mehua}")
 
-    print("Virhetilanteita:")
+def virhetilanteita1(mehua, olutta):
     print("Varasto(-100.0);")
     huono = Varasto(-100.0)
     print(huono)
@@ -41,6 +48,7 @@ def main():
     mehua.lisaa_varastoon(-666.0)
     print(f"Mehuvarasto: {mehua}")
 
+def virhetilanteita2(mehua, olutta):
     print(f"Olutvarasto: {olutta}")
     print("olutta.ota_varastosta(1000.0)")
     saatiin = olutta.ota_varastosta(1000.0)
@@ -52,7 +60,6 @@ def main():
     saatiin = mehua.ota_varastosta(-32.9)
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
-
 
 if __name__ == "__main__":
     main()
